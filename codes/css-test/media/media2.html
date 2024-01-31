@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局 - 媒体查询</title>
+</head>
+
+<body>
+    <style>
+        /* max-width:1000px */
+        @media (min-width:700px) {
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+
+        /* 竖屏 */
+        @media (orientation:portrait) {
+            .box2 {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+
+        /* 横屏 */
+        @media (orientation:landscape) {
+            .box2 {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+            }
+        }
+    </style>
+
+    <div class="box1">
+        min-width:700px
+    </div>
+
+    <div class="box2">
+        横竖屏颜色变化
+    </div>
+</body>
+
+</html>

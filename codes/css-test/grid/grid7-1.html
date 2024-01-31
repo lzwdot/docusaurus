@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 子项对齐方式</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .box1 div:nth-of-type(1) {
+            width: 50px;
+            height: 50px;
+            /* 子项自身对齐方式 */
+            justify-self: center;
+            align-self: center;
+        }
+
+        .box1 div:nth-of-type(2) {
+            background-color: slategray;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+
+</html>

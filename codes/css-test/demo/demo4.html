@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 - 视觉差布局</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.min.css">
+    <style>
+        html,
+        body,
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1920x1080);
+            background-size: cover;
+        }
+
+        .container1 h2,
+        .container1 p {
+            color: white;
+            position: absolute;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container2 {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container2 .item1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1920x1081);
+            background-size: cover;
+        }
+
+        .container2 .item2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1920x1082);
+            background-size: cover;
+        }
+
+        .container2 .item3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1920x1083);
+            background-size: cover;
+        }
+
+        .container2 .item4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1920x1084);
+            background-size: cover;
+        }
+
+        .container3 {
+            position: fixed;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container3 .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container3 .item1 {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1921x1080);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container3 .item2 {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1922x1080);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container3 .item3 {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1923x1080);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container3 .item4 {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://fakeimg.pl/1924x1080);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/skrollr/0.6.9/skrollr.min.js"></script>
+
+    <div class="main">
+        <div class="container1" data-300="top:0%" data-700="top:-100%">
+            <h2 data-0="top:5%;font-size:40px;opacity:0" data-300="top:50%;font-size:60px;opacity:1">标题</h2>
+            <p data-0="top:90%;opacity:0" data-300="top:60%;opacity:1">文章文章文章文章文章文章文章文章</p>
+        </div>
+        <div class="container2" data-300="top:100%" data-700="top:0%" data-1600="top:0%" data-2000="top:-100%">
+            <div class="item1" data-700="opacity:1;transform:scale(1)" data-1000="opacity:0;transform:scale(0.5)"></div>
+            <div class="item2" data-700="opacity:0;transform:scale(2)" data-1000="opacity:1;transform:scale(1)"
+                data-1300="opacity:0;transform:scale(0.5)"></div>
+            <div class="item3" data-1000="opacity:0;transform:scale(2)" data-1300="opacity:1;transform:scale(1)"
+                data-1600="opacity:0;transform:scale(0.5)"></div>
+            <div class="item4" data-1300="opacity:0;transform:scale(2)" data-1600="opacity:1;transform:scale(1)"></div>
+        </div>
+        <div class="container3" data-1600="top:100%" data-2000="top:0%">
+            <div class="wrapper" data-1200="top:0%" data-3000="top:-300%">
+                <div class="item1"></div>
+                <div class="item2"></div>
+                <div class="item3"></div>
+                <div class="item4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        skrollr.init() 
+    </script>
+</body>
+
+</html>

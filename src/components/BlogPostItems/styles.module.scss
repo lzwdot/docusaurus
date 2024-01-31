@@ -1,0 +1,42 @@
+.article {
+  display: flex;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.avatar {
+  &__photo {
+    border-radius: 0;
+  }
+
+  &__intro {
+    display: inline-flex;
+  }
+  &__name {
+    font-weight: normal;
+  }
+}
+
+.content {
+  flex: 1;  
+  overflow: hidden;
+}
+
+.title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.comments{
+  display: flex;
+  align-items: center;
+}
+
+.tags {
+  display: inline;
+}
+
+.tag {
+  margin: 0 0.4rem 0.5rem 0;
+  display: inline-block;
+}
