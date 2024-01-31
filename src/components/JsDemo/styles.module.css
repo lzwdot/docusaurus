@@ -1,0 +1,23 @@
+.jsDemo {
+  margin-bottom: 30px;
+}
+
+.jsDemo iframe { 
+  display: none;
+}
+
+.jsDemo>* {
+  margin: 0 !important;
+}
+
+.jsDemo summary {
+  background: #eee;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.jsDemo .consoleLog{  
+  background: #1c1e21;
+  color: #f5f6f7;
+}

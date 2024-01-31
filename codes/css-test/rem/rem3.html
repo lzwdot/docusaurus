@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem 布局 - 自动计算</title>
+</head>
+
+<body>
+    <style>
+        html {
+            font-size: 26.666667vw;
+        }
+
+        body {
+            font-size: 0.16rem;
+        }
+
+        .box {
+            /* 安装 px to rem 插件，自动转换: alt+ z */
+            width: 0.72rem;
+            height: 0.72rem;
+            background-color: red;
+        }
+    </style>
+
+    <div class="box">测试</div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 比定位更方便的叠加布局</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 530px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+        }
+
+        .box1 img {
+            grid-area: 1/1/1/1;
+        }
+
+        .box1 span {
+            grid-area: 1/1/1/1;
+            justify-self: end;
+            margin: 5px;
+        }
+
+        .box1 p {
+            grid-area: 1/1/1/1;
+            align-self: end;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 30px;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+
+
+    <div class="box box1">
+        <img src="https://fakeimg.pl/530x300" alt="">
+        <span>自制</span>
+        <p>美丽的图片...</p>
+    </div>
+</body>
+
+</html>

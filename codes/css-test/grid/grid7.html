@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 基于线的元素放置</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .box1 div:nth-of-type(1) {
+            /* 区域的起始和终止位置，默认值都是 auto */
+            grid-column-start: 2;
+            grid-column-end: 3;
+            /* grid-row-start: 2;
+            grid-row-end: 4; */
+        }
+
+        .box1 div:nth-of-type(2) {
+            background-color: slategray;
+        }
+
+        .box2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .box2 div:nth-of-type(1) {
+            /* 从第二个开始，span 表示占几列 */
+            grid-column-start: 2;
+            grid-column-end: span 3;
+        }
+
+        .box2 div:nth-of-type(2) {
+            background-color: slategray;
+        }
+
+        .box3 {
+            display: grid;
+            /* 网格命名，默认显示数字 */
+            grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4];
+            grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4];
+        }
+
+        .box3 div:nth-of-type(1) {
+            /* 通过命名方式控制 */
+            grid-column-start: col2;
+            grid-column-end: col4;
+        }
+
+        .box3 div:nth-of-type(2) {
+            background-color: slategray;
+        }
+
+        .box4 {
+            display: grid;
+            /* 网格命名，默认显示数字 */
+            grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4];
+            grid-template-rows: [row1] 1fr [row2] 1fr [row3] 1fr [row4];
+        }
+
+        .box4 div:nth-of-type(1) {
+            /* 缩写 2 / 3， [开始]/[结束]*/
+            /* grid-column: 2 / 3; */
+            /* grid-row: 2 / 3; */
+
+            /* grid-row-start: 2;
+            grid-column-start: 2;
+            grid-row-end: 3;
+            grid-column-end: 3;
+             以上四个的缩写，
+             注意顺序是： start/start/end/end*/
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .box4 div:nth-of-type(2) {
+            background-color: slategray;
+            /* 缩写 2 / 3， [开始]/[结束]*/
+            grid-row: 2 / 3;
+        }
+    </style>
+
+    区域的起始和终止位置，默认值都是 auto
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    span 表示占几列
+    <div class="box box2">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    通过命名方式控制
+    <div class="box box3">
+        <div>1</div>
+        <div>2</div>
+    </div>
+
+    缩写方式
+    <div class="box box4">
+        <div>1</div>
+        <div>2</div>
+    </div>
+</body>
+
+</html>

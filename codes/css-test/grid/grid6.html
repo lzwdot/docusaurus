@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 显式网格与隐式网格</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+
+            /* 默认：row 就是行产生隐式网格，比如 4,5 */
+            grid-auto-flow: row;
+            /* 可以调节产生隐式网格的高度 */
+            grid-auto-rows: 120px;
+        }
+
+        .box1 div {
+            background-color: pink;
+        }
+
+        .box2 {
+            display: grid;
+            grid-template-columns: 100px;
+            grid-template-rows: 100px 100px 100px;
+
+            /* column 就是列产生隐式网格，比如 4,5 */
+            grid-auto-flow: column;
+            /* 可以调节产生隐式网格的宽度 */
+            grid-auto-columns: 120px;
+        }
+
+        .box2 div {
+            background-color: pink;
+        }
+
+        .box3 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+            /* dense 紧密排列 */
+            grid-auto-flow: row dense;
+            grid-auto-rows: 100px;
+        }
+
+        .box3 div {
+            background-color: pink;
+        }
+
+        .box3 div:nth-of-type(1) {
+            /* 从第二列开始排列 */
+            grid-column-start: 2;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4 <br>行隐式网格</div>
+        <div>5 <br>行隐式网格</div>
+    </div>
+
+    <div class="box box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4 <br>列隐式网格</div>
+        <div>5 <br>列隐式网格</div>
+    </div>
+
+    <div class="box box3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+
+</html>

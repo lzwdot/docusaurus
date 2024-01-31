@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem 布局 - 布局原理</title>
+</head>
+
+<body>
+    <style>
+        html {
+            font-size: 30px;
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box1 {
+            /* 字体大小默认 16px */
+            font-size: 2em;
+            /* em 相对字体大小 */
+            border: 2em skyblue solid;
+        }
+
+        .box2 {
+            /* 字体大小默认 16px */
+            font-size: 2rem;
+            /* rem 相对根元素字体大小 */
+            border: 2rem skyblue solid;
+        }
+    </style>
+
+    em 单位测试
+    <div class="box box1">
+        <pre style="font-size: 14px;">
+font-size: 2em;
+border: 2em skyblue solid;
+        </pre>
+    </div>
+
+    rem 单位测试
+    <div class="box box2">
+        <pre style="font-size: 14px;">
+font-size: 2rem;
+border: 2rem skyblue solid;
+        </pre>
+    </div>
+</body>
+
+</html>

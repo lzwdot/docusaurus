@@ -1,0 +1,44 @@
+.htmlDemo {
+  margin-bottom: 30px;
+}
+
+.htmlDemo iframe {
+  /* 网格效果 */
+  background-image: linear-gradient(to right, #eee 1px, transparent 1px),
+    linear-gradient(to bottom, #eee 1px, transparent 1px);
+
+  /* 网格大小 */
+  background-size: 10px 10px;
+
+  /* 设置右边和底部边框 */
+  border: 1px solid #eee;
+  border-left: none;
+  border-top: none;
+  box-sizing: border-box;
+  padding: 10px;
+  min-height: 300px;
+}
+
+.htmlDemo>* {
+  margin: 0 !important;
+}
+
+.htmlDemo header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.htmlDemo header>a {
+  cursor: pointer;
+}
+
+.htmlDemo header>a:hover {
+  text-decoration: underline;
+}
+
+.htmlDemo summary {
+  background: #eee;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
