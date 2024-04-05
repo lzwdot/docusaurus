@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 - 视觉差布局</title>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 110vh;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 300px;
+            border: 10px pink solid;
+            background-image: url(https://fakeimg.pl/300x300);
+            background-attachment: fixed;
+        }
+        .box2{
+            margin-top: 400px;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/skrollr/0.6.9/skrollr.min.js"></script>
+    <div class="box1"></div>
+    <div class="box2" 
+    data-200="width:500px" 
+    data-400="width100px;transform:rotate(0deg)"
+    data-600="width100px;transform:rotate(360deg)"
+    ></div>
+    <script>
+        skrollr.init() 
+    </script>
+</body>
+
+</html>

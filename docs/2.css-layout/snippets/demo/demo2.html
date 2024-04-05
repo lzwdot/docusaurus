@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例 - 竖向瀑布流</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.min.css">
+    <style>
+        .main {
+            column-count: 4;
+            column-width: 200px;
+            column-gap: 20px;
+            column-rule: 1px gray solid;
+        }
+
+        .main h1 {
+            column-span: all;
+            text-align: center;
+        }
+
+        .main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+    <div class="main">
+        <h1>我是标题</h1>
+        <div class="item">
+            <img src="https://fakeimg.pl/300x300" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/200x200" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/400x400" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/500x500" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/600x600" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/700x700" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/310x310" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/740x740" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/450x450" alt="">
+        </div>
+        <div class="item">
+            <img src="https://fakeimg.pl/510x510" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

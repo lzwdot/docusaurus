@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局 - 媒体查询</title>
+</head>
+
+<body>
+    <style>
+        @media (min-width:700px) and (max-width:1000px) {
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+
+        @media not (min-width:700px) {
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+
+        @media screen,print and (min-width:700px) {
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+        }
+    </style>
+
+    <div class="box1">
+        (min-width:700px) and (max-width:1000px)
+    </div>
+
+    <div class="box2">
+        not (min-width:700px)
+    </div>
+
+    <div class="box3">
+        screen,print and (min-width:700px)
+    </div>
+</body>
+
+</html>

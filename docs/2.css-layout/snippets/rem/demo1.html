@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rem 布局 - 网易移动端</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/reseter.css/2.0.0/reseter.min.css" />
+  <style>
+    @font-face {
+      font-family: 'iconfont';
+      /* Project id 3183629 */
+      src: url('//at.alicdn.com/t/font_3183629_z06mjl22wp.woff2?t=1645622584293') format('woff2'),
+        url('//at.alicdn.com/t/font_3183629_z06mjl22wp.woff?t=1645622584293') format('woff'),
+        url('//at.alicdn.com/t/font_3183629_z06mjl22wp.ttf?t=1645622584293') format('truetype');
+    }
+
+    .icon {
+      font-family: iconfont;
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #34372e;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    html {
+      margin: 0 auto;
+      max-width: 375px;
+      font-size: 26.666666666666668vw;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    .head {
+      height: 43px;
+      background-color: #ef1b1a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .head-user,
+    .head-email {
+      width: 25%;
+    }
+
+    .head-email {
+      text-align: right;
+    }
+
+    .head-logo {
+      width: 50%;
+      text-align: center;
+
+    }
+
+    .head-logo .icon {
+      font-size: 28px;
+    }
+
+    .nav {
+      height: 46px;
+      border-bottom: 0.5px #ededed solid;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      box-sizing: border-box;
+    }
+
+    .nav li {
+      flex-grow: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .nav li.active a {
+      color: #ef191b;
+    }
+
+    .nav li.active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      margin-left: -7px;
+      width: 15px;
+      height: 2px;
+      background-color: #ef191b;
+    }
+
+    .nav-sub {
+      padding: 11px 10px 7px 10px;
+      background-color: #f8f8f8;
+      position: relative;
+    }
+
+    .nav-sub-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: 35px;
+    }
+
+    .nav-sub__closed {
+      height: 70px;
+      overflow: hidden;
+    }
+    
+    .nav-sub__closed+.nav-sub-arrow {
+      transform: rotate(0deg);
+    }
+
+    .nav-sub-arrow {
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      transform: rotate(180deg);
+    }
+
+    .news {
+      padding: 0 10px;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .news-title {
+      font-size: 18px;
+      line-height: 66px;
+    }
+
+    .news-item {
+      margin-bottom: 25px;
+    }
+
+    .news-item-title {
+      line-height: 22px;
+      font-size: 17px;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .news-item-info {
+      font-size: 12px;
+      color: #b3b4b6;
+    }
+
+    .news-item-img {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 9px;
+    }
+
+    .news2 {
+      /* padding: 0 10px; */
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .news2-item {
+      border-top: 0.5px #f6f7f9 solid;
+      padding: 10px;
+      display: flex;
+    }
+
+    .news2-item-content {
+      flex-grow: 1;
+      margin-right: 15px;
+    }
+
+    .news2-item-title {
+      line-height: 22px;
+      font-size: 17px;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .news2-item-info {
+      font-size: 12px;
+      color: #b3b4b6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .news2-item-img {
+      width: 117px;
+    }
+
+    .news2-item-app {
+      color: #fb1515;
+      border: 0.5px #fbbab8 solid;
+      border-radius: 100px;
+      padding: 2px 5px;
+    }
+  </style>
+
+  <div class="head">
+    <div class="head-user">
+      <span class="icon">&#xe633;</span>
+    </div>
+    <div class="head-logo">
+      <span class="icon">&#xe6ad;</span>
+    </div>
+    <div class="head-email">
+      <span class="icon">&#xe908;</span>邮箱
+      <span class="icon">&#xe602;</span>
+    </div>
+  </div>
+  <ul class="nav">
+    <li class="active">
+      <a href="#">要闻</a>
+    </li>
+    <li>
+      <a href="#">推荐</a>
+    </li>
+    <li>
+      <a href="#">原创</a>
+    </li>
+    <li>
+      <a href="#">热点</a>
+    </li>
+  </ul>
+  <div class="nav-sub">
+    <ul class="nav-sub-list nav-sub__closed">
+      <li><a href="#">新闻</a></li>
+      <li><a href="#">抗疫</a></li>
+      <li><a href="#">娱乐</a></li>
+      <li><a href="#">体育</a></li>
+      <li><a href="#">财经</a></li>
+      <li><a href="#">新闻</a></li>
+      <li><a href="#">抗疫</a></li>
+      <li><a href="#">娱乐</a></li>
+      <li><a href="#">体育</a></li>
+      <li><a href="#">财经</a></li>
+      <li><a href="#">新闻</a></li>
+      <li><a href="#">抗疫</a></li>
+      <li><a href="#">娱乐</a></li>
+      <li><a href="#">体育</a></li>
+      <li><a href="#">财经</a></li>
+    </ul>
+    <div class="nav-sub-arrow">
+      <span class="icon">&#xe65e;</span>
+    </div>
+  </div>
+  <div class="news">
+    <h2 class="news-title">今日要闻</h2>
+    <div class="news-item">
+      <h3 class="news-item-title">测试文字</h3>
+      <p class="news-item-info">央视网 1小时前 89跟帖</p>
+    </div>
+    <div class="news-item">
+      <h3 class="news-item-title">测试文字</h3>
+      <div class="news-item-img">
+        <img src="https://fakeimg.pl/530x300" alt="">
+      </div>
+      <p class="news-item-info">央视网 1小时前 89跟帖</p>
+    </div>
+    <div class="news-item">
+      <h3 class="news-item-title">测试文字</h3>
+      <p class="news-item-info">央视网 1小时前 89跟帖</p>
+    </div>
+  </div>
+  <div class="news2">
+    <div class="news2-item">
+      <div class="news2-item-content">
+        <h3 class="news2-item-title">测试文字</h3>
+        <p class="news2-item-info">
+          <span>央视网 89跟帖</span>
+          <span class="news2-item-app">
+            打开APP
+          </span>
+        </p>
+      </div>
+      <div class="news2-item-img">
+        <img src="https://fakeimg.pl/750x300" alt="">
+      </div>
+    </div>
+    <div class="news2-item">
+      <div class="news2-item-content">
+        <h3 class="news2-item-title">测试文字</h3>
+        <p class="news2-item-info">
+          <span>央视网 89跟帖</span>
+          <span class="news2-item-app">
+            打开APP
+          </span>
+        </p>
+      </div>
+      <div class="news2-item-img">
+        <img src="https://fakeimg.pl/750x300" alt="">
+      </div>
+    </div>
+    <div class="news2-item">
+      <div class="news2-item-content">
+        <h3 class="news2-item-title">测试文字</h3>
+        <p class="news2-item-info">
+          <span>央视网 89跟帖</span>
+          <span class="news2-item-app">
+            打开APP
+          </span>
+        </p>
+      </div>
+      <div class="news2-item-img">
+        <img src="https://fakeimg.pl/750x300" alt="">
+      </div>
+    </div>
+</body>
+
+</html>

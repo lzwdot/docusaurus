@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid布局 - 网格对齐方式及简写</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            margin-bottom: 10px;
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+
+        .box div {
+            background-color: pink;
+            border: 1px gray solid;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+
+            /* 指定子项对齐方式 */
+            /* justify-items: end;
+            align-items: center; */
+
+            /* 简写 先垂直，后水平 */
+            place-items: end center;
+        }
+
+        .box1 div {
+            /* 子项指定自己的大小 */
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            /* 所有网格对齐方式 */
+            /* justify-content: space-evenly;
+            align-content: end; */
+
+            /* 简写，先垂直，后水平 */
+            place-content: end space-evenly;
+
+        }
+        .box2 div {           
+            background-color: pink;
+        }
+    </style>
+
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <div class="box box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+
+</html>
