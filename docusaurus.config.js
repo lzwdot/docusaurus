@@ -149,7 +149,6 @@ const config = {
           width: 129,
           height: 129,
         },
-        links: [],
         copyright: `Copyright © ${new Date().getFullYear()}-present Lzw.`,
       },
       prism: {
