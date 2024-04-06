@@ -29,7 +29,8 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'lzwdot', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'lzwdot.github.io', // Usually your repo name.
+  deploymentBranch : 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
