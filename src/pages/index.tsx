@@ -10,8 +10,13 @@ import SearchPage from "../components/SearchPage";
 function HomeLogo() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <div className="max-w-sm">
-      <img src="/mp-qr.webp" alt={siteConfig.title} loading="lazy" />
+    <div>
+      <img
+        src="https://open.weixin.qq.com/qr/code?username=jslangcn"
+        alt={siteConfig.title}
+        loading="lazy"
+        className="max-h-40 mt-5"
+      />
     </div>
   );
 }

@@ -371,7 +371,7 @@ function SearchPageContent(): JSX.Element {
         <meta property="robots" content="noindex, follow" />
       </Head>
 
-      <div className="container margin-vert--lg">
+      <div className="container margin-vert--md">
         {/* <Heading as="h1">{getTitle()}</Heading> */}
 
         <form className="row" onSubmit={(e) => e.preventDefault()}>

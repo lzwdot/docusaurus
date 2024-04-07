@@ -5,7 +5,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type * as DocsPlugin from '@docusaurus/plugin-content-docs';
 import packageJson from '../../package.json'
 
-const feedbackPlugin = path.resolve(__dirname, '..', 'plugins/Feedback/index.js');
+// plugins
+const FeedbackPlugin = path.resolve(__dirname, '..', 'plugins/Feedback/index.js');
+const TailwindPlugin = path.resolve(__dirname, '..', 'plugins/Tailwind/index.js');
+// assets
 const customCss = path.resolve(__dirname, '..', 'assets/custom.css');
 const sidebarPath = path.resolve(__dirname, 'sidebars.ts');
 const admonitions = {
@@ -30,7 +33,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'lzwdot', // Usually your GitHub org/user name.
   projectName: 'lzwdot.github.io', // Usually your repo name.
-  deploymentBranch : 'main',
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,7 +46,8 @@ const config: Config = {
     locales: ['zh-Hans'],
   },
   plugins: [
-    feedbackPlugin,
+    FeedbackPlugin,
+    TailwindPlugin,
     "docusaurus-plugin-sass",
     [
       'docusaurus-plugin-baidu-tongji',
@@ -114,26 +118,40 @@ const config: Config = {
       },
       items: [
         {
+          label: "博文",
+          to: "/blog",
+          position: "left"
+        },
+        {
+          label: "笔记",
+          to: "/docs",
+          position: "left"
+        },
+        {
+          label: "真题",
+          to: "/issue",
+          position: "left",
+        },
+        {
           type: 'search',
           position: 'left',
         },
-        { to: "/blog", label: "博文", position: "right" },
         {
-          type: "doc",
-          docId: "README",
-          position: "right",
-          label: "笔记",
-        },
-        {
-          to: "/issue",
-          label: "真题",
-          position: "right",
-          activeBaseRegex: `/issue/`,
-        },
-        { to: "/feedback", label: "反馈", position: "right" },
-        {
+          label: '反馈',
+          to: '/feedback',
           type: 'dropdown',
+          position: 'right',
+          items: [
+            {
+              label: '关于',
+              to: '/about',
+            },
+          ],
+        },
+        {
           label: packageJson.version,
+          to: '/',
+          type: 'dropdown',
           position: 'right',
           items: [
             {

@@ -3,7 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-
+@config "../config/tailwind.ts";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,14 +18,16 @@
 [data-theme="dark"] {}
 
 .navbar__inner,
-.main-wrapper {
+[class*="docsWrapper"] {
   max-width: var(--ifm-container-width);
   margin: auto;
   width: 100%;
 }
+
 .menu {
   font-size: 0.8rem;
 }
+
 .table-of-contents li a {
   white-space: nowrap;
   overflow: hidden;
