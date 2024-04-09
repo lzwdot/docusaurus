@@ -126,7 +126,7 @@ function getMaxId() {
 
   // 最新 10 篇文章
   allPosts = allPosts.sort((a, b) => dayjs(b.date) - dayjs(a.date)).slice(0, 10)
-  fs.writeFileSync(`./${srcDir}/config/latest.json`, JSON.stringify(allPosts))
+  fs.writeFileSync(`./${srcDir}/data/latest.json`, JSON.stringify(allPosts))
 
   return maxID
 }

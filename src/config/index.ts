@@ -184,7 +184,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `基于 MIT 许可发布 <br/> Copyright © ${new Date().getFullYear()}-present Lzw.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lzw. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

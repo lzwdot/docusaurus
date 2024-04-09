@@ -5,7 +5,7 @@ import { useTitleFormatter } from '@docusaurus/theme-common/internal';
 import Layout from '@theme/Layout';
 import Head from "@docusaurus/Head";
 import { useLocation } from '@docusaurus/router';
-import latestPosts from "./../config/latest.json";
+import latestPosts from "./../data/latest.json";
 import SearchPage from "../components/SearchPage";
 function HomeLogo() {
   const { siteConfig } = useDocusaurusContext();
