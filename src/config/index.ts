@@ -21,7 +21,7 @@ const cfgLogo = 'logo.svg'
 const config: Config = {
   favicon: cfgLogo,
   title: cfgTitle,
-  tagline: "记录和分享，每天进步一点点！",
+  tagline: "专注于互联网 web 技术分享",
 
   // Set the production url of your site here
   url: 'https://lzwdot.com',
@@ -95,7 +95,7 @@ const config: Config = {
           blogTitle: "博文",
           blogDescription: "博文",
           blogSidebarTitle: "最新博文",
-          blogSidebarCount: 0,
+          blogSidebarCount: 'ALL',
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links. 
@@ -184,7 +184,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Lzw. Built with Docusaurus.`,
+      copyright: `基于 MIT 许可发布<br/>Copyright © ${new Date().getFullYear()}-present Lzw.`,
     },
     prism: {
       theme: prismThemes.github,

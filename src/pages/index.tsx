@@ -15,7 +15,7 @@ function HomeLogo() {
         src="https://open.weixin.qq.com/qr/code?username=jslangcn"
         alt={siteConfig.title}
         loading="lazy"
-        className="max-h-40 mt-5"
+        className="max-w-56"
       />
     </div>
   );
@@ -45,13 +45,17 @@ export default function Home(): JSX.Element {
       <Head>
         <title>{useTitleFormatter(siteConfig.tagline)}</title>
       </Head>
-      <main className="container !max-w-screen-md">
-        <div className="flex justify-center">
-          <HomeLogo />
-        </div>
-        <SearchPage />
-        <div className="flex justify-center">
-          <LatestPosts />
+      <main className="container !max-w-screen-md mt-24">
+        <div className="grid grid-cols-12">
+          <div className="sm:col-span-8 col-span-12">
+            <SearchPage />
+            <div className="flex sm:justify-start justify-center">
+              <LatestPosts />
+            </div>
+          </div>
+          <div className="sm:col-span-4 col-span-12 flex justify-center sm:order-last order-first">
+            <HomeLogo />
+          </div>
         </div>
       </main>
     </Layout>
