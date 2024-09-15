@@ -9,7 +9,7 @@ import packageJson from '../../package.json'
 const FeedbackPlugin = path.resolve(__dirname, '..', 'plugins/Feedback/index.js');
 const TailwindPlugin = path.resolve(__dirname, '..', 'plugins/Tailwind/index.js');
 // assets
-const customCss = path.resolve(__dirname, '..', 'assets/custom.css');
+const customCss = path.resolve(__dirname, '..', 'assets/custom.scss');
 const sidebarPath = path.resolve(__dirname, 'sidebars.ts');
 const admonitions = {
   keywords: ['htmlDemo', 'jsDemo'],
