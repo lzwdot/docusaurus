@@ -65,6 +65,9 @@ const config: Config = {
         admonitions,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
+        editUrl: (res) => {
+          return '/feedback'
+        },
       } satisfies DocsPlugin.Options,
     ]
   ],
@@ -88,6 +91,9 @@ const config: Config = {
           },
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          editUrl: (res) => {
+            return '/feedback'
+          }
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
@@ -97,6 +103,9 @@ const config: Config = {
           blogSidebarTitle: "最新博文",
           blogSidebarCount: 'ALL',
           showReadingTime: true,
+          editUrl: (res) => {
+            return '/feedback'
+          }
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links. 
         },
@@ -137,14 +146,14 @@ const config: Config = {
           position: 'left',
         },
         {
-          label: '反馈',
-          to: '/feedback',
+          label: '关于',
+          to: '/about',
           type: 'dropdown',
           position: 'right',
           items: [
             {
-              label: '关于',
-              to: '/about',
+              label: '反馈',
+              to: '/feedback',
             },
           ],
         },
