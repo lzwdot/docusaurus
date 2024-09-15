@@ -102,11 +102,15 @@ aside {
 
 // main
 main {
-  h2 {
-    border-top: 1px solid var(--ifm-toc-border-color);
-    padding-top: calc(
-      var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
-    );
+  article {
+    .markdown {
+      & > h2 {
+        border-top: 1px solid var(--ifm-toc-border-color);
+        padding-top: calc(
+          var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
+        );
+      }
+    }
   }
 }
 
