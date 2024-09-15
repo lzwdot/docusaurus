@@ -102,9 +102,16 @@ aside {
 
 // main
 main {
+  header {
+    h1,
+    h2 {
+      font-size: min(2rem, var(--ifm-h1-font-size)) !important;
+    }
+  }
   article {
     .markdown {
       & > h2 {
+        font-size: min(1.5rem, var(--ifm-h2-font-size)) !important;
         border-top: 1px solid var(--ifm-toc-border-color);
         padding-top: calc(
           var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
