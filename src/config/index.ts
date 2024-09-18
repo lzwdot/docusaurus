@@ -44,6 +44,7 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
+    path:'src/i18n'
   },
   plugins: [
     FeedbackPlugin,
