@@ -194,7 +194,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `基于 MIT 许可发布<br/>Copyright © ${new Date().getFullYear()}-present Lzw.`,
+      copyright: `基于 MIT 许可发布<br/>Copyright © 2021-present Lzw.`,
     },
     prism: {
       theme: prismThemes.github,
