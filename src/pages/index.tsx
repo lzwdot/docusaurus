@@ -45,7 +45,7 @@ export default function Home(): JSX.Element {
       <Head>
         <title>{useTitleFormatter(siteConfig.tagline)}</title>
       </Head>
-      <main className="container !max-w-screen-md mt-24">
+      <main className="container !max-w-screen-md mt-20 mb-20">
         <div className="grid grid-cols-12">
           <div className="sm:col-span-8 col-span-12">
             <SearchPage />
