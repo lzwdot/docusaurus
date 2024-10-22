@@ -70,6 +70,21 @@ const config: Config = {
           return '/feedback'
         },
       } satisfies DocsPlugin.Options,
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "feed",
+        path: "feed",
+        routeBasePath: "feed",
+        sidebarPath,
+        admonitions,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        editUrl: (res) => {
+          return '/feedback'
+        },
+      } satisfies DocsPlugin.Options,
     ]
   ],
 
@@ -140,6 +155,11 @@ const config: Config = {
         {
           label: "真题",
           to: "/issue",
+          position: "left",
+        },
+        {
+          label: "订阅",
+          to: "/feed",
           position: "left",
         },
         {

@@ -11,6 +11,7 @@ const srcDir = 'src' // src 目录
 const blogDir = 'blog' // blog 目录
 const docsDir = 'docs' // docs 目录
 const issueDir = 'issue' // issue 目录
+const feedDir = 'feed' // feed 目录
 
 // 修改内容
 const files = glob.sync('./issue/**/**');
@@ -47,7 +48,7 @@ files.forEach(async (file) => {
 
 //============创建文档 或 博客========================
 const fileType = process.argv.slice(2)[0] // docs | blog | issue
-const reg = new RegExp(`^${blogDir}|${docsDir}|${issueDir}+$`)
+const reg = new RegExp(`^${blogDir}|${docsDir}|${issueDir}|${feedDir}+$`)
 
 reg.test(fileType) ? createMd(fileType) : getMaxId()
 //============创建文档 或 博客 END========================
@@ -123,6 +124,9 @@ function getMaxId() {
 
   // 遍历 issue 下所有文件
   syncDir(issueDir)
+
+  // 遍历 feed 下所有文件
+  syncDir(feedDir)
 
   // 最新 10 篇文章
   allPosts = allPosts.sort((a, b) => dayjs(b.date) - dayjs(a.date)).slice(0, 10)

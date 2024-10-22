@@ -2,13 +2,13 @@ import React from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import Giscus from '@giscus/react';
 
-export default function Comments(props) {
+export default function Comment(props) {
   const { colorMode } = useColorMode();
   let { type } = props
 
   return (
     <Giscus
-      id="comments"
+      id="comment"
       repo="lzwdot/docusaurus"
       repoId="R_kgDOLMEUdA"
       category="Announcements"
