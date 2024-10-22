@@ -8,6 +8,7 @@ const sources = [
   { key: 'vuejs', link: 'https://blog.vuejs.org/feed.rss' },
   { key: 'nodejs', link: 'https://nodejs.org/zh-cn/feed/blog.xml' },
   { key: 'laravel', link: 'https://feed.laravel-news.com' },
+  { key: 'javascriptweekly', link: 'https://cprss.s3.amazonaws.com/javascriptweekly.com.xml' },
 ]
 
 !(async () => {
@@ -22,7 +23,7 @@ const sources = [
       data.items.push({
         title: item.title,
         link: item.link,
-        description: item.description || item.contentSnippet,
+        description: item.content,
         pubDate:  dayjs(item.isoDate).format('YYYY-MM-DD')
       })
     });

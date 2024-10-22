@@ -69,7 +69,7 @@ export default function Feed(props) {
               发布于 {item.pubDate.substring(0, 16)}
             </div>
             <div className={styles.blogPostDescription}>
-              {item.description}
+              <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
             </div>
           </div>
         })}
