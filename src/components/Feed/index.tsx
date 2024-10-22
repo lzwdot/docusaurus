@@ -60,13 +60,13 @@ export default function Feed(props) {
           {description}
         </p>
       </div>
-      <h2>Recent Posts</h2>
+      <h2>最新文章</h2>
       <div className={styles.blogPosts}>
         {items.map(item => {
           return <div className={styles.blogPost} key={item.link}>
-            <h3><a href={item.link}>{item.title}</a></h3>
+            <h3><a href={item.link} target='_blank'>{item.title}</a></h3>
             <div className={styles.blogPostDate}>
-              Published on {item.pubDate.substring(0, 17)}
+              发布于 {item.pubDate.substring(0, 16)}
             </div>
             <div className={styles.blogPostDescription}>
               {item.description}
