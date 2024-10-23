@@ -7,7 +7,7 @@ export default function Feed(props) {
   const { title, description, items = [] } = feeds[source] || {}
 
   return (
-    <main>
+    <section>
       <div className={styles.description}>
         {/* <div className={styles.info}>
           <strong>This is an RSS feed</strong>. Subscribe by copying the URL
@@ -74,6 +74,6 @@ export default function Feed(props) {
           </div>
         })}
       </div>
-    </main>
+    </section>
   );
 }
