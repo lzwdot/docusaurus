@@ -16,14 +16,14 @@ const sources = [
     const res = await parser.parseURL(v.link);
     const data = {
       title: res.title,
-      description: res.description,
+      description: res.description=='undefined' ? '' : res.description,
       items: []
     }
     res.items.forEach(item => {
       data.items.push({
         title: item.title,
         link: item.link,
-        description: item.content,
+        description: item.content || item.contentSnippet || item.description,
         pubDate:  dayjs(item.isoDate).format('YYYY-MM-DD')
       })
     });
