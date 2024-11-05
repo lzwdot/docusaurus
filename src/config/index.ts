@@ -44,7 +44,7 @@ const config: Config = {
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
-    path:'src/i18n'
+    path: 'src/i18n'
   },
   plugins: [
     FeedbackPlugin,
@@ -221,6 +221,9 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  future: {
+    experimental_faster: true,
+  }
 };
 
 export default config;
