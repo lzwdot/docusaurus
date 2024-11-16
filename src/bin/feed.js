@@ -6,7 +6,7 @@ const feeds = {};
 const sources = [
   { key: 'docusaurus', link: 'https://docusaurus.io/zh-CN/blog/rss.xml' },
   { key: 'vuejs', link: 'https://blog.vuejs.org/feed.rss' },
-  { key: 'nodejs', link: 'https://nodejs.org/zh-cn/feed/blog.xml' },
+  { key: 'nodejs', link: 'https://nodejs.org/en/feed/blog.xml' },
   { key: 'laravel', link: 'https://feed.laravel-news.com' },
   { key: 'javascriptweekly', link: 'https://cprss.s3.amazonaws.com/javascriptweekly.com.xml' },
 ]

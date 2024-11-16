@@ -187,11 +187,7 @@ const config: Config = {
             {
               label: 'v2.x',
               href: 'https://lzwdot.github.io/docusaurus',
-            },
-            {
-              label: 'VitePress',
-              href: 'https://lzwdot.github.io/vitepress',
-            },
+            }
           ],
         },
         {
