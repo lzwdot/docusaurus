@@ -13,7 +13,7 @@ export default function FooterWrapper(props: Props): JSX.Element {
   return (
     <>
       <Footer {...props} />
-      {frontMatter.slug && <Comment {...{ type: 'docs' }} />}
+      {/* {frontMatter.slug && <Comment {...{ type: 'docs' }} />} */}
     </>
   );
 }

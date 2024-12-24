@@ -13,7 +13,7 @@ export default function BlogPostItemWrapper(props: Props): JSX.Element {
   return (
     <>
       <BlogPostItem {...props} />      
-      {isBlogPostPage && <Comment {...{type:'blog'}}/>}
+      {/* {isBlogPostPage && <Comment {...{type:'blog'}}/>} */}
     </>
   );
 }
