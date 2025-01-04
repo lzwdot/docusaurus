@@ -4,8 +4,9 @@ import feeds from "../../data/feed.json";
 
 export default function Feed(props) {
   const { source } = props
-  const { title = '', description = '', items = [] } = feeds[source] || {}
+  // const { title = '', description = '', items = [] } = feeds[source] || {}
 
+  return (<div>暂无内容</div>)
   return (
     <section>
       <div className={styles.description}>
